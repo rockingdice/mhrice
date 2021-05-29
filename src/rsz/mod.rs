@@ -694,7 +694,9 @@ static RSZ_TYPE_MAP: Lazy<HashMap<u32, RszDeserializerFn>> = Lazy::new(|| {
         PartData,
         BitSetFlagHabitatType,
         BossMonsterData,
-        MonsterListBossData
+        MonsterListBossData,
+        MonsterBasicData,
+        MonsterListData,
     );
 
     r!(

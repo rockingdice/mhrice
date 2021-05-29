@@ -250,6 +250,10 @@ pub fn gen_pedia(pak: &mut PakReader<impl Read + Seek>) -> Result<Pedia> {
         pak,
         "data/Define/Common/HunterNote/MonsterListBossData.user",
     )?;
+    let small_monster_list = get_user(
+        pak, 
+        "data/Define/Common/HunterNote/MonsterListMediumData.user",
+    )?;
     let hunter_note_msg = get_msg(pak, "Message/HunterNote/HN_Hunternote_Menu.msg")?;
 
     let monster_lot = get_user(
@@ -359,6 +363,7 @@ pub fn gen_pedia(pak: &mut PakReader<impl Read + Seek>) -> Result<Pedia> {
         monster_aliases,
         condition_preset,
         monster_list,
+        small_monster_list,
         hunter_note_msg,
         monster_lot,
         parts_type,

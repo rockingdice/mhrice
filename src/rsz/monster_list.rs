@@ -54,3 +54,21 @@ rsz_struct! {
         pub data_list: Vec<BossMonsterData>
     }
 }
+
+rsz_struct! {
+    #[rsz("snow.data.monsterList.MonsterBasicData")]
+    #[derive(Debug, Serialize)]
+    pub struct MonsterBasicData {
+        pub enemy_type: EmTypes,
+        pub family_type: i32,
+        pub habitat_area: BitSetFlagHabitatType,
+    }
+}
+
+rsz_struct! {
+    #[rsz("snow.data.monsterList.MonsterListData")]
+    #[derive(Debug, Serialize)]
+    pub struct MonsterListData {
+        pub data_list: Vec<MonsterBasicData>,
+    }
+}
